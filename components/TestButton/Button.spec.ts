@@ -2,12 +2,8 @@ import { shallowMount } from '@vue/test-utils';
 import Button from './Button.vue';
 import { describe, it, expect, beforeAll } from 'vitest';
 import { createTestingPinia } from '@pinia/testing';
-import { createPinia, setActivePinia } from 'pinia';
 
 describe('Button', () => {
-  beforeAll(() => {
-    setActivePinia(createPinia())
-  })
   it('snapshot - should match the snapshot', () => {
     const wrapper = shallowMount(Button, {
       global: {
