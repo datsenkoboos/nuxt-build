@@ -1,6 +1,6 @@
 <template>
   <button
-    v-show="uiStore.loading"
+    v-show="uiStore.loading && show"
     class="relative bg-yellow-500 flex items-center justify-center link transition-all disabled:cursor-not-allowed"
     :class="[buttonSizingClasses]"
   >
@@ -21,6 +21,8 @@ const uiStore = useUiStore();
 interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl';
 }
+
+const show = ref(true);
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
