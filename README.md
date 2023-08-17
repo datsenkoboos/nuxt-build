@@ -4,8 +4,6 @@
 
 `pnpm i`
 
-scripts in `package.json`
-
 ### Test:
 
 `pnpm run test Button.spec.ts` (should pass)
